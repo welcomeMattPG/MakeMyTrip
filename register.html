@@ -4,7 +4,7 @@
 </head>
 <body>
 <h1>MakeMyTrip</h1>
-<form>
+<form action="index.php" method="post">
 <div>
 <label for="title">title</label>
 </div>
@@ -50,7 +50,7 @@
 <label for="birthday">Birthday: </label>
 </div>
 <div>
-<input type="date" id="birthday" name="birthdayh>
+<input type="date" id="birthday" name="birthday">
 </div>
 <div>
 <label for="gender">Gender: </label>
@@ -69,8 +69,10 @@
 <select id="country" name="country">
 </select>
 </div>
-</form>
+<div>
 <input type="submit" id="register" name="register" value="Register now">
+</div>
+</form>
 <script>
 const countryList = [
   "Afghanistan",
