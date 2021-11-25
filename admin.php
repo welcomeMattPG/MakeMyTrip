@@ -115,7 +115,7 @@
 					<th>Country</th>
                 </tr>
 				 <?php
-				 	$q="select * from user";
+				 	$q="select * from User";
 					$result=$mysqli->query($q);
 					if(!$result){
 						echo "Select failed. Error: ".$mysqli->error ;
@@ -167,7 +167,7 @@
 					<th>Request</th>
                 </tr>
 				 <?php
-				 	$q="select * from booking";
+				 	$q="select * from Booking";
 					$result=$mysqli->query($q);
 					if(!$result){
 						echo "Select failed. Error: ".$mysqli->error ;
