@@ -35,11 +35,11 @@
 		 	$result = $mysqli->query($q);
 			 echo "<form action='updateuser.php' method='post'>";
 			 echo "<label>Title</label>";
-			 echo "<select name="title" id="title">";
-			 echo "<option value="Mr.">Mr</option>";
-			 echo "<option value="Ms.">Ms</option>";
-			 echo "<option value="Mrs.">Mrs</option>";
-			 echo "<option value="-">-</option>";			 
+			 echo "<select name='title' id='title'>";
+			 echo "<option value='Mr.'>Mr</option>";
+			 echo "<option value='Ms.'>Ms</option>";
+			 echo "<option value='Mrs.'>Mrs</option>";
+			 echo "<option value='-'>-</option>";			 
 			 echo "</select>";
 		 
 			echo "<label>First Name</label>";
@@ -61,10 +61,10 @@
 			echo "<input type=date name=birthday value=".$row['birthday']."><br>";
 
 			echo "<label>Gender</label>";
-			echo "<select name="gender" id="gender">";
-			echo "<option value="Male">Male</option>";
-			echo "<option value="Female">Female</option>";
-			echo "<option value="Other">Other</option>";
+			echo "<select name='gender' id='gender'>";
+			echo "<option value='Male'>Male</option>";
+			echo "<option value='Female'>Female</option>";
+			echo "<option value='Other'>Other</option>";
 			echo "</select>";
 			echo "<div></div>";
 

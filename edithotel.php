@@ -64,11 +64,11 @@
 			echo "<input type=text name=hotel_website value=".$row['hotel_website']."><br>";
 
 			echo "<label>Rating</label>";
-			echo "<select name="rating" id="rating">";
-			echo "<option value="1">1</option>";
-			echo "<option value="2">2</option>";
-			echo "<option value="3">3</option>";
-			echo "<option value="4">4</option>";
+			echo "<select name='rating' id='rating'>";
+			echo "<option value='1'>1</option>";
+			echo "<option value='2'>2</option>";
+			echo "<option value='3'>3</option>";
+			echo "<option value='4'>4</option>";
 			echo "<option value="5">5</option>";
 
 			echo "</select>";
