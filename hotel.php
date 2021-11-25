@@ -10,7 +10,7 @@
 		MakeMyTrip 
 	</div>
 	<div>
-			<a href="register.html">Register</a>
+			<a href="register.php">Register</a>
 			<a href="index.php">Login</a>
 			<a href="hotel.php">Hotel List</a>
 			<a href="add_review.html">Add Review</a>

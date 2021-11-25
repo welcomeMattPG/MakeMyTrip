@@ -10,7 +10,7 @@
 		Makemytrip 
 	</div>
 	<div>
-			<a href="register.html">Register</a>
+			<a href="register.php">Register</a>
 			<a href="index.php">Login</a>
 			<a href="hotel.php">Hotel List</a>
 			<a href="add_review.html">Add Review</a>
@@ -56,7 +56,7 @@
                     <th>Traveller Type</th>
                 </tr>
 				 <?php
-				 	$q="select h.hotel_name,r.* from review as r, hotel as h where h.hotel_id=r.hotel_id";
+				 	$q="select h.hotel_name,r.* from Review as r, Hotel as h where h.hotel_id=r.hotel_id";
 					$result=$mysqli->query($q);
 					if(!$result){
 						echo "Select failed. Error: ".$mysqli->error ;
