@@ -12,7 +12,7 @@ $mysqli->close();
 header("Location: admin.php");
 }
 else if (isset($hid)){
-$q="DELETE FROM Hotel where hotel_id=$uid";
+$q="DELETE FROM Hotel where hotel_id=$hid";
 if(!$mysqli->query($q)){
 echo "DELETE failed. Error: ".$mysqli->error ;
 }
@@ -20,7 +20,7 @@ $mysqli->close();
 header("Location: admin.php");
 }
 else if (isset($bid)){
-$q="DELETE FROM Booking where booking_id=$uid";
+$q="DELETE FROM Booking where booking_id=$bid";
 if(!$mysqli->query($q)){
 echo "DELETE failed. Error: ".$mysqli->error ;
 }
