@@ -250,6 +250,7 @@ $countryList = [
   "Zambia",
   "Zimbabwe"
 ];
+echo "<select id='country' name='country'>";
 foreach ($countryList as $i){
 if ($i == "Thailand"){
 echo "<option value='$i' selected='selected'>$i</option>";
@@ -258,4 +259,5 @@ else{
 echo "<option value='$i'>$i</option>";
 }
 }
+echo "</select>";
 ?>
