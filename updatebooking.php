@@ -10,13 +10,13 @@ require_once('connect.php');
 		$request = $_POST['request'];
 
 
-		$q1="UPDATE Booking SET booking_id= '$groupid',num_adult= '$num_adult',num_children= '$num_children',booking_dt= '$booking_dt', from_date = '$from_date', to_date = '$to_date', 
+		$q1="UPDATE Booking SET num_adult= '$num_adult',num_children= '$num_children',booking_dt= '$booking_dt', from_date = '$from_date', to_date = '$to_date', 
 		request = '$request' where booking_id = '$booking_id'";
 		$result1=$mysqli->query($q1);
 		if(!$result1){
 			echo "INSERT failed. Error: ".$mysqli->error ;
 			return false;
 			}
-		header("Location: booking.php");
+		header("Location: admin.php");
 	}
 ?>

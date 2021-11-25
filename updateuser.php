@@ -11,13 +11,13 @@ require_once('connect.php');
 		$gender = $_POST['gender'];
 		$country = $_POST['country'];
 
-		$q1="UPDATE User SET user_id= '$userid', title = '$title',fname = '$fname', 
+		$q1="UPDATE User SET title = '$title',fname = '$fname', 
 		lname = '$lname', email = '$email', passwd = '$password' , phone = '$phone_no', gender = '$gender',country = '$country' where user_id = '$uid'";
 		$result1=$mysqli->query($q1);
 		if(!$result1){
 			echo "INSERT failed. Error: ".$mysqli->error ;
 			return false;
 		}
-		header("Location: user.php");
+		header("Location: admin.php");
 	}
 ?>
