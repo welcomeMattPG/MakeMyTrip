@@ -44,7 +44,7 @@ $country = $_POST['country'];
 </div>
 </form>
 <div>
-<a href="register.html">Register</a>
+<a href="register.php">Register</a>
 </div>
 </body>
 </html>

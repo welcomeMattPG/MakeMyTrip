@@ -7,7 +7,7 @@
 <body>
 <div> 
 	<div>
-		MakeNyTrip 
+		MakeMyTrip 
 	</div>
 	<div>
 			<a href="register.html">Register</a>
