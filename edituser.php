@@ -13,12 +13,12 @@
 	</div>
 	<div id="div_subhead">
 		<ul id="menu">
-			<li><a href="user.php">Register</a></li>
-			<li><a href="add_user.php">Login</a></li>
-			<li><a href="group.php">Hotel List</a></li>
-			<li><a href="add_group.html">Add Review</a></li>
-			<li><a href="add_group.html">Show Review</a></li>
-			<li><a href="add_group.html">Admin</a></li>
+			<li><a href="register.php">Register</a></li>
+			<li><a href="index.php">Login</a></li>
+			<li><a href="hotel.php">Hotel List</a></li>
+			<li><a href="add_review.html">Add Review</a></li>
+			<li><a href="review.html">Show Review</a></li>
+			<li><a href="aadmin">Admin</a></li>
 
 		</ul>		
 	</div>
@@ -66,10 +66,9 @@
 			echo "<option value="Female">Female</option>";
 			echo "<option value="Other">Other</option>";
 			echo "</select>";
-			echo "com";
 			echo "<div></div>";
 
-			echo "<input type='hidden' name='page' value='adduser' >";
+			echo "<input type=hidden name=uid value='".$row['user_id']."'><br>";
 			
 			echo "<div class='center'>";			
 			echo "<input type=submit name=su value=submit>";

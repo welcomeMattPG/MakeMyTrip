@@ -1,7 +1,7 @@
 <?php
 require_once('connect.php'); 
 	if(isset($_POST['su'])) {
-		$booking_id=$_POST['uid'];
+		$booking_id=$_POST['bid'];
 		$num_adult = $_POST['num_adult'];
 		$num_children = $_POST['num_children'];
 		$booking_dt = $_POST['booking_dt'];

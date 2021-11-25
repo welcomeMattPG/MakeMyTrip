@@ -13,12 +13,13 @@
 	</div>
 	<div id="div_subhead">
 	<ul id="menu">
-			<li><a href="user.php">Register</a></li>
-			<li><a href="add_user.php">Login</a></li>
-			<li><a href="group.php">Hotel List</a></li>
-			<li><a href="add_group.html">Add Review</a></li>
-			<li><a href="add_group.html">Show Review</a></li>
-			<li><a href="add_group.html">Admin</a></li>
+		<li><a href="register.php">Register</a></li>
+			<li><a href="index.php">Login</a></li>
+			<li><a href="hotel.php">Hotel List</a></li>
+			<li><a href="add_review.html">Add Review</a></li>
+			<li><a href="review.html">Show Review</a></li>
+			<li><a href="aadmin">Admin</a></li>
+
 		</ul>	
 	</div>
 	<div id="div_main">
@@ -28,9 +29,9 @@
 		<div id="div_content" class="form">
 		<h2>Edit Hotel</h2>
 		<?php
-		 $uid = $_GET['uid'];
+		 $hid = $_GET['hid'];
 		require_once('connect.php'); 
-		$q="SELECT * FROM Hotel where hotel_id=$uid";
+		$q="SELECT * FROM Hotel where hotel_id=$hid";
 		 $result = $mysqli->query($q);
 			echo "<form action='updatehotel.php' method='post'>";
 			while($row=$result->fetch_array()){
