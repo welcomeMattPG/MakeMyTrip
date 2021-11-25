@@ -70,7 +70,7 @@
 					<th>Rating</th>
                 </tr>
 				 <?php
-				 	$q="select * from Hotel";
+				 	$q="select h.*, u.user_id from Hotel as h, User as u";
 					$result=$mysqli->query($q);
 					if(!$result){
 						echo "Select failed. Error: ".$mysqli->error ;
