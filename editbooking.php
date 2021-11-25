@@ -17,7 +17,7 @@
 			<li><a href="hotel.php">Hotel List</a></li>
 			<li><a href="add_review.html">Add Review</a></li>
 			<li><a href="review.html">Show Review</a></li>
-			<li><a href="aadmin">Admin</a></li>
+			<li><a href="admin.php">Admin</a></li>
 
 		</ul>		
 	</div>
@@ -35,15 +35,50 @@
 			echo "<form action='updatebooking.php' method='post'>";
 			while($row=$result->fetch_array()){
 			echo "<label>Booking ID</label>";
-			echo "<input type=text name=booking_id value=".$row['booking_id']."><br>";
+			echo "<input type=text name=bid value=".$row['booking_id']."><br>";
 			
 			echo "<label>Num Adult</label>";
-			echo "<input type=text name=new_adult value=".$row['new_adult']."><br>";
+			echo "<select id='adult' name='adult'>";
+			if($row['num_adult'] == '0'){
+				echo "<option value='0' selected>0</option>";
+				echo "<option value='1'>1</option>";
+				echo "<option value='2'>2</option>";
+				echo "<option value='3'>3</option>";
+			}elseif($row['num_adult'] == '1'){
+				echo "<option value='0'>0</option>";
+				echo "<option value='1' selected>1</option>";
+				echo "<option value='2'>2</option>";
+				echo "<option value='3'>3</option>";
+			}elseif($row['num_adult'] == '2'){
+				echo "<option value='0'>0</option>";
+				echo "<option value='1'>1</option>";
+				echo "<option value='2' selected>2</option>";
+				echo "<option value='3'>3</option>";
+			}elseif($row['num_adult'] == '3'){
+				echo "<option value='0'>0</option>";
+				echo "<option value='1'>1</option>";
+				echo "<option value='2'>2</option>";
+				echo "<option value='3' selected>3</option>";
+			}
+			echo "</select><br>";
 			
 			echo "<label>Num Children</label>";
-			echo "<textarea name=remark>".$row['USERGROUP_REMARK']."</textarea><br>";
-			echo "<input type=hidden name=new_children value='".$row['new_children']."'><br>";
-			
+			echo "<select id='children' name='children'>";
+			if($row['num_children'] == '0'){
+				echo "<option value='0' selected>0</option>";
+				echo "<option value='1'>1</option>";
+				echo "<option value='2'>2</option>";
+			}elseif($row['num_children'] == '1'){
+				echo "<option value='0'>0</option>";
+				echo "<option value='1' selected>1</option>";
+				echo "<option value='2'>2</option>";
+			}elseif($row['num_children'] == '2'){
+				echo "<option value='0'>0</option>";
+				echo "<option value='1'>1</option>";
+				echo "<option value='2' selected>2</option>";
+			}
+			echo "</select><br>";
+
 			echo "<label>Booking Date&Time</label>";
 			echo "<input type=text name=booking_dt value=".$row['booking_dt']."><br>";
 

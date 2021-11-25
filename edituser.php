@@ -33,6 +33,7 @@
 			require_once('connect.php'); 
 			$q="SELECT * FROM User where user_id =$uid";
 		 	$result = $mysqli->query($q);
+			 $row=$result->fetch_array();
 			 echo "<form action='updateuser.php' method='post'>";
 			 echo "<label>Title</label>";
 			 echo "<select name='title' id='title'>";
@@ -52,7 +53,7 @@
 			echo "<input type=text name=email value=".$row['email']."><br>";
 
 			echo "<label>Password</label>";
-			echo "<input type=password name=passwd value=".$row['passwd']."><br>";
+			echo "<input type=password name=passwd value=".$row['password']."><br>";
 
 			echo "<label>Phone Number</label>";
 			echo "<input type=text name=phone value=".$row['phone_no']."><br>";
@@ -68,13 +69,12 @@
 			echo "</select>";
 			echo "<div></div>";
 
-			echo "<input type=hidden name=uid value='".$row['user_id']."'><br>";
+			echo "<input type=hidden name=uid value=".$row['user_id']."><br>";
 			
 			echo "<div class='center'>";			
 			echo "<input type=submit name=su value=submit>";
 			echo "<input type='reset' value='Cancel'>	";
 			echo "</div>";
-			}
 			echo "</form>";
 			
 		?>

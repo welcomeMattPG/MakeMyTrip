@@ -79,8 +79,8 @@
 					<td><?=$row['hotel_email']?></td>
 					<td><?=$row['hotel_website']?></td>
 					<td><?=$row['hotel_rating']?></td>
-                    <td><a href='editinfo.php?hid=<?=$row['hotel_id']?>'>Edit</a></td>
-                    <td><a href='delinfo.php?hid=<?=$row['hotel_id']?>'>Delete</a></td>
+                    <td><a href='edithotel.php?hid=<?=$row['hotel_id']?>'>Edit</a></td>
+                    <td><a href='delhotel.php?hid=<?=$row['hotel_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 
@@ -133,8 +133,8 @@
 					<td><?=$row['birthday']?></td>
 					<td><?=$row['gender']?></td>
 					<td><?=$row['country']?></td>
-                    <td><a href='editinfo.php?uid=<?=$row['user_id']?>'>Edit</a></td>
-                    <td><a href='delinfo.php?uid=<?=$row['user_id']?>'>Delete</a></td>
+                    <td><a href='edituser.php?uid=<?=$row['user_id']?>'>Edit</a></td>
+                    <td><a href='deluser.php?uid=<?=$row['user_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 
@@ -184,8 +184,8 @@
 					<td><?=$row['from_date']?></td>
 					<td><?=$row['to_date']?></td>
 					<td><?=$row['request']?></td>
-                    <td><a href='editinfo.php?bid=<?=$row['booking_id']?>'>Edit</a></td>
-                    <td><a href='delinfo.php?bid=<?=$row['booking_id']?>'>Delete</a></td>
+                    <td><a href='editbooking.php?bid=<?=$row['booking_id']?>'>Edit</a></td>
+                    <td><a href='delbooking.php?bid=<?=$row['booking_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 

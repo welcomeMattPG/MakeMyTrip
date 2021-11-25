@@ -36,14 +36,13 @@
 			echo "<form action='updatehotel.php' method='post'>";
 			while($row=$result->fetch_array()){
 			echo "<label>Hotel ID/label>";
-			echo "<input type=text name=hotel_id value=".$row['hotel_id']."><br>";
+			echo "<input type=text name=hid value=".$row['hotel_id']."><br>";
 			
 			echo "<label>Name</label>";
 			echo "<input type=text name=hotel_name value=".$row['hotel_name']."><br>";
 			
 			echo "<label>Address</label>";
-			echo "<textarea name=remark>".$row['USERGROUP_REMARK']."</textarea><br>";
-			echo "<input type=hidden name=hotel_address value='".$row['hotel_address']."'><br>";
+			echo "<textarea name=hotel_address>".$row['hotel_address']."</textarea><br>";
 			
 			echo "<label>City</label>";
 			echo "<input type=text name=hotel_city value=".$row['hotel_city']."><br>";
@@ -69,7 +68,7 @@
 			echo "<option value='2'>2</option>";
 			echo "<option value='3'>3</option>";
 			echo "<option value='4'>4</option>";
-			echo "<option value="5">5</option>";
+			echo "<option value='5'>5</option>";
 
 			echo "</select>";
 		

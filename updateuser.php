@@ -12,7 +12,7 @@ require_once('connect.php');
 		$country = $_POST['country'];
 
 		$q1="UPDATE User SET title = '$title',fname = '$fname', 
-		lname = '$lname', email = '$email', passwd = '$password' , phone = '$phone_no', gender = '$gender',country = '$country' where user_id = '$uid'";
+		lname = '$lname', email = '$email', password = '$passwd' , phone_no = '$phone_no', gender = '$gender',country = '$country' where user_id = '$uid'";
 		$result1=$mysqli->query($q1);
 		if(!$result1){
 			echo "INSERT failed. Error: ".$mysqli->error ;

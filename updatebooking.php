@@ -2,8 +2,8 @@
 require_once('connect.php'); 
 	if(isset($_POST['su'])) {
 		$booking_id=$_POST['bid'];
-		$num_adult = $_POST['num_adult'];
-		$num_children = $_POST['num_children'];
+		$num_adult = $_POST['adult'];
+		$num_children = $_POST['children'];
 		$booking_dt = $_POST['booking_dt'];
 		$from_date = $_POST['from_date'];
 		$to_date = $_POST['to_date'];
