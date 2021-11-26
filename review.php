@@ -41,7 +41,7 @@ if(isset($_POST['addreview'])){
 			<a href="register.php">Register</a>
 			<a href="index.php">Login</a>
 			<a href="hotel.php">Hotel List</a>
-			<a href="add_review.html">Add Review</a>
+			<a href="add_review.php">Add Review</a>
 			<a href="review.php">Show Review</a>
 			<a href="admin.php">Admin</a>		
 	</div>

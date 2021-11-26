@@ -33,28 +33,13 @@ if(isset($_POST['add_hotel'])){
 			<a href="register.php">Register</a>
 			<a href="index.php">Login</a>
 			<a href="hotel.php">Hotel List</a>
-			<a href="add_review.html">Add Review</a>
+			<a href="add_review.php">Add Review</a>
 			<a href="review.php">Show Review</a>
 			<a href="admin.php">Admin</a>		
 	</div>
 	<div>
 		<div>
 			<!--%%%%% Main block %%%%-->
-			<?php 
-				if(isset($_POST['submit'])) {
-					$groupcode = $_POST['groupcode'];
-					$groupname = $_POST['groupname'];
-					$remark = $_POST['remark'];
-					$url = $_POST['url'];
-
-					$q="INSERT INTO USERGROUP(USERGROUP_CODE,USERGROUP_NAME,USERGROUP_REMARK,USERGROUP_URL) VALUES ('$groupcode','$groupname','$remark','$url');";
-					$result=$mysqli->query($q);
-					if(!$result){
-						echo "INSERT failed. Error: ".$mysqli->error ;
-						return false;
-					}
-				}
-			?>
 			<h2>Hotels List</h2>			
 			<table>
                 <col width="10%">

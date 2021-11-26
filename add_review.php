@@ -66,10 +66,10 @@
 <option value="couple">Couple</option>
 </select>
 </div>
-<div>
-<label for="review_dt">Review Date: </label>
-</div>
-<input type=date id=review_dt name=review_dt><br>
+<?php
+$today = date("y.m.d");
+?>
+<input type="hidden" id="review_dt" name="review_dt" value=<?=$today?>>
 <input type="submit" id="addreview" name="addreview" value="Add new review">
 </form>
 </body>

@@ -17,6 +17,6 @@ require_once('connect.php');
 			echo "INSERT failed. Error: ".$mysqli->error ;
 			return false;
 			}
-		header("Location: admin.php");
+		header("Location: confirm_book.php");
 	}
 ?>

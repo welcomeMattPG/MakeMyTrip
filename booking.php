@@ -4,6 +4,10 @@
 <title>Book hotel</title>
 </head>
 <body>
+<?php
+    $hotel_id = $_GET['hid'];
+    $user_id = $_GET['uid'];
+?>
 <h1>MakeMyTrip</h1>
 <h2>Book hotel</h2>
 <form action="confirm_book.php" method="post">
@@ -19,7 +23,7 @@
 </select>
 </div>
 <div>
-label for="children">Number of children</label>
+<label for="children">Number of children</label>
 </div>
 <div>
 <select id="children" name="children">
@@ -40,6 +44,18 @@ label for="children">Number of children</label>
 <div>
 <input type="date" id="todate" name="todate">
 </div>
+<div>
+<label for="request">Request: </label>
+</div>
+<div>
+<input type="text" id="request" name="request">
+</div>
+<?php
+$today = date("y.m.d");
+?>
+<input type="hidden" id="user_id" name="uid" value=<?=$user_id?>>
+<input type="hidden" id="hotel_id" name="hid" value=<?=$hotel_id?>>
+<input type="hidden" id="booking_dt" name="booking_dt" value=<?=$today?>>
 <div>
 <input type="submit" value="Book new" id="book" name="book">
 </div>

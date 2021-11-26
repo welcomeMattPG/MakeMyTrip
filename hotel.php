@@ -13,7 +13,7 @@
 			<a href="register.php">Register</a>
 			<a href="index.php">Login</a>
 			<a href="hotel.php">Hotel List</a>
-			<a href="add_review.html">Add Review</a>
+			<a href="add_review.php">Add Review</a>
 			<a href="review.php">Show Review</a>
 			<a href="admin.php">Admin</a>		
 	</div>
@@ -43,6 +43,13 @@
                         }
                     }
 				}
+				else if($_GET['uid'] != ''){
+					$uid = $_GET['uid'];
+				}
+				else{
+					echo "Please Login before booking the hotel";
+					return false;
+				}
 			?>
 			<h2>Hotels List</h2>			
 			<table>
@@ -70,7 +77,7 @@
 					<th>Rating</th>
                 </tr>
 				 <?php
-				 	$q="select h.*, u.user_id from Hotel as h, User as u";
+				 	$q="select * from Hotel ";
 					$result=$mysqli->query($q);
 					if(!$result){
 						echo "Select failed. Error: ".$mysqli->error ;
@@ -88,7 +95,25 @@
 					<td><?=$row['hotel_email']?></td>
 					<td><?=$row['hotel_website']?></td>
 					<td><?=$row['hotel_rating']?></td>
-                    <td><a href='booking.php?hid=<?=$row['hotel_id']?>&uid=<?=$row['user_id']?>'> Booking</a></td>
+					<?php
+					if($email!=''){
+						$q2="select user_id from User where email = '$email'";
+						$result2=$mysqli->query($q2);
+						if(!$result2){
+							echo "Select failed. Error: ".$mysqli->error ;
+							return false;
+						}
+						$row2=$result2->fetch_array();
+					?>
+					<td><a href='booking.php?hid=<?=$row['hotel_id']?>&uid=<?=$row2['user_id']?>'> Booking</a></td>
+					<?php
+					}
+					else {
+					?>
+						<td><a href='booking.php?hid=<?=$row['hotel_id']?>&uid=<?=$uid?>'> Booking</a></td>
+					<?php
+					}
+					?>
                 </tr>                               
 				<?php } ?>
 

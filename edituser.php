@@ -16,7 +16,7 @@
 			<li><a href="register.php">Register</a></li>
 			<li><a href="index.php">Login</a></li>
 			<li><a href="hotel.php">Hotel List</a></li>
-			<li><a href="add_review.html">Add Review</a></li>
+			<li><a href="add_review.php">Add Review</a></li>
 			<li><a href="review.html">Show Review</a></li>
 			<li><a href="aadmin">Admin</a></li>
 
@@ -68,6 +68,13 @@
 			echo "<option value='Other'>Other</option>";
 			echo "</select>";
 			echo "<div></div>";
+
+			echo "<label for='country'>Country: </label>";
+			echo "</div>";
+			echo "<div>";
+			require_once('country.php');
+			echo "</div>";
+			echo "<div>";
 
 			echo "<input type=hidden name=uid value=".$row['user_id']."><br>";
 			

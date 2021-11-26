@@ -16,7 +16,7 @@
 		<li><a href="register.php">Register</a></li>
 			<li><a href="index.php">Login</a></li>
 			<li><a href="hotel.php">Hotel List</a></li>
-			<li><a href="add_review.html">Add Review</a></li>
+			<li><a href="add_review.php">Add Review</a></li>
 			<li><a href="review.html">Show Review</a></li>
 			<li><a href="aadmin">Admin</a></li>
 
