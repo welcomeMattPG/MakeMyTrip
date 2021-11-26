@@ -2,8 +2,11 @@
 <html>
 <head>
 <title>Confirm booking</title>
+<link rel="stylesheet" href="table.css">
+
 </head>
 <body>
+<div class="table-wrapper">
 <?php
 if(isset($_POST['book'])){ 
     $uid = $_POST['uid'];
@@ -30,5 +33,6 @@ if(isset($_POST['book'])){
 <?php
 }
 ?>
+</div>
 </body>
 </html>

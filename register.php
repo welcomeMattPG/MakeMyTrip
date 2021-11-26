@@ -1,9 +1,13 @@
 <html>
 <head>
 <title>Register</title>
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <h1>MakeMyTrip</h1>
+<div class="table-wrapper">
 <form action="index.php" method="post">
 <div>
 <label for="title">title</label>
@@ -19,32 +23,32 @@
 <div>
 <label for="firstname">First name: </label>
 </div>
-<div>
-<input type="text" id="firstname" name="firstname">
+<div class="form-group">
+<input type="text" class="form-field" id="firstname" name="firstname">
 </div>
 <div>
 <label for="lastname">Last name: </label>
 </div>
-<div>
-<input type="text" id="lastname" name="lastname">
+<div class="form-group">
+<input type="text" class="form-field" id="lastname" name="lastname">
 </div>
 <div>
 <label for="email">Email: </label>
 </div>
-<div>
-<input type="text" id="email" name="email">
+<div class="form-group">
+<input type="email" class="form-field" id="email" name="email">
 </div>
 <div>
 <label for="password">Password: </label>
 </div>
-<div>
-<input type="password" id="password" name="password">
+<div class="form-group">
+<input type="password" class="form-field" id="password" name="password">
 </div>
 <div>
 <label for="phone">Phone no: </label>
 </div>
-<div>
-<input type="text" id="phone" name="phone">
+<div class="form-group">
+<input type="text" class="form-field" id="phone" name="phone">
 </div>
 <div>
 <label for="birthday">Birthday: </label>
@@ -70,6 +74,7 @@
 </div>
 <div>
 <input type="submit" id="register" name="register" value="Register now">
+</div>
 </div>
 </form>
 </body>

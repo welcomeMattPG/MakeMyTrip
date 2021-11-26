@@ -2,6 +2,10 @@
 <html>
 <head>
 <title>Login</title>
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
+
 </head>
 <body>
 <?php
@@ -26,18 +30,13 @@ $country = $_POST['country'];
 ?>
 <h1>MakeMyTrip</h1>
 <h2>Login</h2>
+<div class="table-wrapper">
 <form action="hotel.php" method="post">
-<div>
-<label for="email">Email: </label>
+<div class="form-group">
+<input type="email" class="form-field" placeholder="Email" id="email" name="email" required/>
 </div>
-<div>
-<input type="text" id="email" name="email">
-</div>
-<div>
-<label for="password">Password: </label>
-</div>
-<div>
-<input type="password" id="password" name="password">
+<div class="form-group">
+<input type="password" class="form-field" placeholder="Password" id="password" name="password" required/>
 </div>
 <div>
 <input type="submit" value="Login" name="login" id="login">
@@ -45,6 +44,7 @@ $country = $_POST['country'];
 </form>
 <div>
 <a href="register.php">Register</a>
+</div>
 </div>
 </body>
 </html>

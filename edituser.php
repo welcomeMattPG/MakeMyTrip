@@ -2,25 +2,16 @@
 <html>
 <head>
 <title>MakeMyTrip</title>
-<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
 </head>
 
 <body>
 
-<div id="wrapper"> 
-	<div id="div_header">
+<div class="table-wrapper"> 
+	<div>
 		MakeMyTrip 
-	</div>
-	<div id="div_subhead">
-		<ul id="menu">
-			<li><a href="register.php">Register</a></li>
-			<li><a href="index.php">Login</a></li>
-			<li><a href="hotel.php">Hotel List</a></li>
-			<li><a href="add_review.php">Add Review</a></li>
-			<li><a href="review.html">Show Review</a></li>
-			<li><a href="aadmin">Admin</a></li>
-
-		</ul>		
 	</div>
 	<div id="div_main">
 		<div id="div_left">
@@ -42,21 +33,33 @@
 			 echo "<option value='Mrs.'>Mrs</option>";
 			 echo "<option value='-'>-</option>";			 
 			 echo "</select>";
-		 
+
+			echo "<div class='form-group'>";
 			echo "<label>First Name</label>";
-			echo "<input type=text name=fname value=".$row['fname']."><br>";
-			
+			echo "</div>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=fname value=".$row['fname']."><br>";
+			echo "</div>";
+
 			echo "<label>Last Name</label>";
-			echo "<input type=text name=lname value=".$row['lname']."><br>";
-			
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=lname value=".$row['lname']."><br>";
+			echo "</div>";
+
 			echo "<label>Email</label>";
-			echo "<input type=text name=email value=".$row['email']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=email value=".$row['email']."><br>";
+			echo "</div>";
 
 			echo "<label>Password</label>";
-			echo "<input type=password name=passwd value=".$row['password']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=password class='form-field' name=passwd value=".$row['password']."><br>";
+			echo "</div>";
 
 			echo "<label>Phone Number</label>";
-			echo "<input type=text name=phone value=".$row['phone_no']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=phone value=".$row['phone_no']."><br>";
+			echo "</div>";
 
 			echo "<label>Birthday</label>";
 			echo "<input type=date name=birthday value=".$row['birthday']."><br>";

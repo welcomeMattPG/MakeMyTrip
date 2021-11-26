@@ -3,8 +3,10 @@
 <html>
 <head>
 <title>Hotels List</title>
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
+<main>
 <div> 
 	<div>
 		MakeMyTrip 
@@ -18,7 +20,7 @@
 			<a href="admin.php">Admin</a>		
 	</div>
 	<div>
-		<div>
+		<div class="table-wrapper">
 			<!--%%%%% Main block %%%%-->
 			<?php 
 				if(isset($_POST['login'])) {
@@ -52,25 +54,22 @@
 				}
 			?>
 			<h2>Hotels List</h2>			
-			<table>
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-				<col width="10%">
-				<col width="10%">
-				<col width="10%">
-				<col width="10%">
+			<table class="fl-table">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+				<col width="12.5%">
+				<col width="12.5%">
+
 
                 <tr>
                     <th>Hotel Code</th> 
                     <th>Hotel Name</th>
-                    <th>Hotel Address</th>
                     <th>City</th>
                     <th>Country</th>
-                    <th>Zipcode</th>
 					<th>Phone</th>
 					<th>Email</th>
 					<th>Website</th>
@@ -87,10 +86,8 @@
                  <tr>
                     <td><?=$row['hotel_id']?></td> 
                     <td><?=$row['hotel_name']?></td>
-                    <td><?=$row['hotel_address']?></td>
                     <td><?=$row['hotel_city']?></td>
 					<td><?=$row['hotel_country']?></td>
-					<td><?=$row['hotel_zip']?></td>
 					<td><?=$row['hotel_phone']?></td>
 					<td><?=$row['hotel_email']?></td>
 					<td><?=$row['hotel_website']?></td>
@@ -128,6 +125,7 @@
 	</div> <!-- end div_main -->
 
 </div>
+</main>
 </body>
 </html>
 

@@ -2,25 +2,16 @@
 <html>
 <head>
 <title>MakeMyTrip</title>
-<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
 </head>
 
 <body>
 
-<div id="wrapper"> 
-	<div id="div_header">
+<div class="table-wrapper"> 
+	<div>
 	MakeMyTrip	</div>
-	<div id="div_subhead">
-		<ul id="menu">
-			<li><a href="register.php">Register</a></li>
-			<li><a href="index.php">Login</a></li>
-			<li><a href="hotel.php">Hotel List</a></li>
-			<li><a href="add_review.php">Add Review</a></li>
-			<li><a href="review.html">Show Review</a></li>
-			<li><a href="admin.php">Admin</a></li>
-
-		</ul>		
-	</div>
 	<div id="div_main">
 		<div id="div_left">
 				
@@ -35,9 +26,10 @@
 			echo "<form action='updatebooking.php' method='post'>";
 			while($row=$result->fetch_array()){
 			echo "<label>Booking ID</label>";
-			echo "<input type=text name=bid value=".$row['booking_id']."><br>";
-			
-			echo "<label>Num Adult</label>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=bid value=".$row['booking_id']."><br>";
+			echo "</div>";
+			echo "<label>Number of Adult</label>";
 			echo "<select id='adult' name='adult'>";
 			if($row['num_adult'] == '0'){
 				echo "<option value='0' selected>0</option>";
@@ -62,7 +54,7 @@
 			}
 			echo "</select><br>";
 			
-			echo "<label>Num Children</label>";
+			echo "<label>Number of Children</label>";
 			echo "<select id='children' name='children'>";
 			if($row['num_children'] == '0'){
 				echo "<option value='0' selected>0</option>";
@@ -79,17 +71,20 @@
 			}
 			echo "</select><br>";
 
-			echo "<label>Booking Date&Time</label>";
-			echo "<input type=text name=booking_dt value=".$row['booking_dt']."><br>";
+			echo "<label>Booking Date</label>";
+			echo "<input type=date name=booking_dt value=".$row['booking_dt']."><br>";
 
 			echo "<label>From Date</label>";
-			echo "<input type=text name=from_date value=".$row['from_date']."><br>";
+			echo "<input type=date name=from_date value=".$row['from_date']."><br>";
+
 
 			echo "<label>To Date</label>";
-			echo "<input type=text name=to_date value=".$row['to_date']."><br>";
+			echo "<input type=date name=to_date value=".$row['to_date']."><br>";
 
 			echo "<label>Request</label>";
-			echo "<input type=text name=request value=".$row['request']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=request value=".$row['request']."><br>";
+			echo "</div>";
 
 			echo "<div class='center'>";			
 			echo "<input type=submit name=su value=submit>";

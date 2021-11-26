@@ -2,15 +2,19 @@
 <html>
 <head>
 <title>Add new review</title>
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <h1>MakeMyTrip</h1>
+<div class="table-wrapper">
 <form action="review.php" method="post">
 <div>
 <label for="name">Name: </label>
 </div>
-<div>
-<input type="text" id="name" name="name">
+<div class="form-group">
+<input type="text" class="form-field" id="name" name="name">
 </div>
 <div>
 <?php
@@ -45,8 +49,8 @@
 <div>
 <label for="head">Head: </label>
 </div>
-<div>
-<input type="text" id="head" name="head">
+<div class="form-group">
+<input type="text" class="form-field" id="head" name="head">
 </div>
 <div>
 <label for="body">Body: </label>
@@ -65,6 +69,7 @@
 <option value="business">Business</otpion>
 <option value="couple">Couple</option>
 </select>
+</div>
 </div>
 <?php
 $today = date("y.m.d");

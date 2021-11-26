@@ -2,25 +2,16 @@
 <html>
 <head>
 <title>MakeMyTrip</title>
-<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="table.css">
 </head>
 
 <body>
 
-<div id="wrapper"> 
-	<div id="div_header">
+<div class="table-wrapper"> 
+	<div>
 		MakeMyTrip
-	</div>
-	<div id="div_subhead">
-	<ul id="menu">
-		<li><a href="register.php">Register</a></li>
-			<li><a href="index.php">Login</a></li>
-			<li><a href="hotel.php">Hotel List</a></li>
-			<li><a href="add_review.php">Add Review</a></li>
-			<li><a href="review.html">Show Review</a></li>
-			<li><a href="aadmin">Admin</a></li>
-
-		</ul>	
 	</div>
 	<div id="div_main">
 		<div id="div_left">
@@ -36,32 +27,50 @@
 			echo "<form action='updatehotel.php' method='post'>";
 			while($row=$result->fetch_array()){
 			echo "<label>Hotel ID/label>";
-			echo "<input type=text name=hid value=".$row['hotel_id']."><br>";
-			
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hid value=".$row['hotel_id']."><br>";
+			echo "</div>";
+
 			echo "<label>Name</label>";
-			echo "<input type=text name=hotel_name value=".$row['hotel_name']."><br>";
-			
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_name value=".$row['hotel_name']."><br>";
+			echo "</div>";
+
 			echo "<label>Address</label>";
-			echo "<textarea name=hotel_address>".$row['hotel_address']."</textarea><br>";
+			echo "<div class='form-group'>";
+			echo "<textarea class='form-field' name=hotel_address>".$row['hotel_address']."</textarea><br>";
+			echo "</div>";
 			
 			echo "<label>City</label>";
-			echo "<input type=text name=hotel_city value=".$row['hotel_city']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_city value=".$row['hotel_city']."><br>";
+			echo "</div>";
 
 			echo "<label>Country</label>";
-			echo "<input type=text name=hotel_country value=".$row['hotel_country']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_country value=".$row['hotel_country']."><br>";
+			echo "</div>";
 
 			echo "<label>Phone Number</label>";
-			echo "<input type=text name=hotel_zip value=".$row['hotel_zip']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_zip value=".$row['hotel_zip']."><br>";
+			echo "</div>";
 
 			echo "<label>Email</label>";
-			echo "<input type=text name=hotel_phone value=".$row['hotel_phone']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_phone value=".$row['hotel_phone']."><br>";
+			echo "</div>";
 
 			echo "<label>Website</label>";
-			echo "<input type=text name=hotel_email value=".$row['hotel_email']."><br>";
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_email value=".$row['hotel_email']."><br>";
+			echo "</div>";
 
 			echo "<label>Rating</label>";
-			echo "<input type=text name=hotel_website value=".$row['hotel_website']."><br>";
-
+			echo "<div class='form-group'>";
+			echo "<input type=text class='form-field' name=hotel_website value=".$row['hotel_website']."><br>";
+			echo "</div>";
+			
 			echo "<label>Rating</label>";
 			echo "<select name='rating' id='rating'>";
 			echo "<option value='1'>1</option>";

@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Book hotel</title>
+<link rel="stylesheet" href="table.css">
+
 </head>
 <body>
 <?php
@@ -10,6 +12,7 @@
 ?>
 <h1>MakeMyTrip</h1>
 <h2>Book hotel</h2>
+<div class="table-wrapper">
 <form action="confirm_book.php" method="post">
 <div>
 <label for="adult">Number of adult: </label>
@@ -58,6 +61,7 @@ $today = date("y.m.d");
 <input type="hidden" id="booking_dt" name="booking_dt" value=<?=$today?>>
 <div>
 <input type="submit" value="Book new" id="book" name="book">
+</div>
 </div>
 </form>
 </body>

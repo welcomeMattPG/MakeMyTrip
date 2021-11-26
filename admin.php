@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Admin Page</title>
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <?php
@@ -35,13 +36,14 @@ if(isset($_POST['add_hotel'])){
 			<a href="hotel.php">Hotel List</a>
 			<a href="add_review.php">Add Review</a>
 			<a href="review.php">Show Review</a>
-			<a href="admin.php">Admin</a>		
+			<a href="admin.php">Admin</a>
+			<a href="add_hotel.php">Add Hotel</a>		
 	</div>
 	<div>
-		<div>
+		<div class="table-wrapper">
 			<!--%%%%% Main block %%%%-->
 			<h2>Hotels List</h2>			
-			<table>
+			<table class="fl-table">
                 <col width="10%">
                 <col width="10%">
                 <col width="10%">
@@ -56,10 +58,8 @@ if(isset($_POST['add_hotel'])){
                 <tr>
                     <th>Hotel Code</th> 
                     <th>Hotel Name</th>
-                    <th>Hotel Address</th>
                     <th>City</th>
                     <th>Country</th>
-                    <th>Zipcode</th>
 					<th>Phone</th>
 					<th>Email</th>
 					<th>Website</th>
@@ -76,10 +76,8 @@ if(isset($_POST['add_hotel'])){
                  <tr>
                     <td><?=$row['hotel_id']?></td> 
                     <td><?=$row['hotel_name']?></td>
-                    <td><?=$row['hotel_address']?></td>
                     <td><?=$row['hotel_city']?></td>
 					<td><?=$row['hotel_country']?></td>
-					<td><?=$row['hotel_zip']?></td>
 					<td><?=$row['hotel_phone']?></td>
 					<td><?=$row['hotel_email']?></td>
 					<td><?=$row['hotel_website']?></td>
@@ -94,8 +92,10 @@ if(isset($_POST['add_hotel'])){
 					$result->free();
 			?>
             </table>
+				 </div>
+			<div class='table-wrapper'>
             <h2>Users List</h2>			
-			<table>
+			<table class="fl-table">
                 <col width="10%">
                 <col width="10%">
                 <col width="10%">
@@ -148,8 +148,10 @@ if(isset($_POST['add_hotel'])){
 					$result->free();
 			?>
             </table>
+				 </div>
+			<div class="table-wrapper">
             <h2>Booking List</h2>			
-			<table>
+			<table class="fl-table">
                 <col width="10%">
                 <col width="10%">
                 <col width="10%">

@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Reviews</title>
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <?php
@@ -46,7 +47,7 @@ if(isset($_POST['addreview'])){
 			<a href="admin.php">Admin</a>		
 	</div>
 	<div>
-		<div>
+		<div class="table-wrapper">
 			<!--%%%%% Main block %%%%-->
 			<?php 
 				if(isset($_POST['submit'])) {
@@ -64,7 +65,7 @@ if(isset($_POST['addreview'])){
 				}
 			?>
 			<h2>Reviews</h2>			
-			<table>
+			<table class="fl-table">
                 <col width="12.5%">
                 <col width="12.5%">
                 <col width="12.5%">
