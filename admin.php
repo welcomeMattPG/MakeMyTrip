@@ -5,6 +5,26 @@
 <title>Admin Page</title>
 </head>
 <body>
+<?php
+if(isset($_POST['add_hotel'])){
+	$name = $_POST['name'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$country = $_POST['country'];
+	$zip = $_POST['zip'];
+	$phone = $_POST['phone'];
+	$email = $_POST['email'];
+	$website = $_POST['website'];
+	$rating = $_POST['rating'];
+	$q="INSERT INTO Hotel (hotel_name, hotel_address, hotel_city, hotel_country, hotel_zip, hotel_phone, hotel_email, hotel_website, hotel_rating)
+		VALUES ('$name', '$address', '$city', '$country', '$zip', '$phone', '$email', '$website', '$rating')";
+	$result=$mysqli->query($q);
+	if(!$result){
+		echo "INSERT failed. Error: ".$mysqli->error;
+		return false;
+	}
+}	
+?>
 <div> 
 	<div>
 		MakeMyTrip 
@@ -80,7 +100,7 @@
 					<td><?=$row['hotel_website']?></td>
 					<td><?=$row['hotel_rating']?></td>
                     <td><a href='edithotel.php?hid=<?=$row['hotel_id']?>'>Edit</a></td>
-                    <td><a href='delhotel.php?hid=<?=$row['hotel_id']?>'>Delete</a></td>
+                    <td><a href='delinfo.php?hid=<?=$row['hotel_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 
@@ -134,7 +154,7 @@
 					<td><?=$row['gender']?></td>
 					<td><?=$row['country']?></td>
                     <td><a href='edituser.php?uid=<?=$row['user_id']?>'>Edit</a></td>
-                    <td><a href='deluser.php?uid=<?=$row['user_id']?>'>Delete</a></td>
+                    <td><a href='delinfo.php?uid=<?=$row['user_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 
@@ -185,7 +205,7 @@
 					<td><?=$row['to_date']?></td>
 					<td><?=$row['request']?></td>
                     <td><a href='editbooking.php?bid=<?=$row['booking_id']?>'>Edit</a></td>
-                    <td><a href='delbooking.php?bid=<?=$row['booking_id']?>'>Delete</a></td>
+                    <td><a href='delinfo.php?bid=<?=$row['booking_id']?>'>Delete</a></td>
                 </tr>                               
 				<?php } ?>
 

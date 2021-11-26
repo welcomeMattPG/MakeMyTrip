@@ -1,15 +1,34 @@
+<?php require_once('connect.php');?>
 <html>
 <head>
 <title>Add new review</title>
 </head>
 <body>
 <h1>MakeMyTrip</h1>
-<form>
+<form action="review.php" method="post">
 <div>
 <label for="name">Name: </label>
 </div>
 <div>
 <input type="text" id="name" name="name">
+</div>
+<div>
+<?php
+    $q="SELECT hotel_name FROM Hotel";
+    $result=$mysqli->query($q);
+    if(!$result){
+        echo "SELECT failed. Error: ".$mysqli->error ;
+        return false;
+    }
+    echo "<div>";
+    echo "<label for='hotel_name'>Hotel Name: </label>";
+    echo "</div>";
+    echo "<select id='hotel_name' name='hotel_name'>";
+    while($row=$result->fetch_array()){
+        echo "<option value='$row[0]'>$row[0]</option>";
+    }
+    echo "</select>";  
+?>  
 </div>
 <div>
 <label for="rating">Ratings: </label>
@@ -47,7 +66,11 @@
 <option value="couple">Couple</option>
 </select>
 </div>
-</form>
+<div>
+<label for="review_dt">Review Date: </label>
+</div>
+<input type=date id=review_dt name=review_dt><br>
 <input type="submit" id="addreview" name="addreview" value="Add new review">
+</form>
 </body>
 </html>

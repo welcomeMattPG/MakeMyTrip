@@ -5,6 +5,34 @@
 <title>Reviews</title>
 </head>
 <body>
+<?php
+
+if(isset($_POST['addreview'])){
+	$name = $_POST['name'];
+	$rating = $_POST['rating'];
+	$head = $_POST['head'];
+	$body = $_POST['body'];
+	$travellertype = $_POST['travellertype'];
+	$hotel_name = $_POST['hotel_name'];
+	$review_dt = $_POST['review_dt'];
+	$q="SELECT hotel_id FROM Hotel where hotel_name = '$hotel_name'";
+	$result=$mysqli->query($q);
+	if(!$result){
+		echo "SELECT failed. Error: ".$mysqli->error;
+		return false;
+	} else{
+		$row = $result->fetch_array();
+		$hotel_id = $row['hotel_id'];
+	}
+	$q2="INSERT INTO Review (reviewer_name, rating, head, body, review_dt, traveller_type, hotel_id)
+		VALUES ('$name', '$rating', '$head', '$body', '$review_dt', '$travellertype', '$hotel_id')";
+	$result=$mysqli->query($q2);
+	if(!$result){
+		echo "INSERT failed. Error: ".$mysqli->error;
+		return false;
+	}
+	}
+?>
 <div> 
 	<div>
 		Makemytrip 

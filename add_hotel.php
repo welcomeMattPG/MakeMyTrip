@@ -3,6 +3,7 @@
 <title>Add new hotel</title>
 </head>
 <body>
+
 <h1>MakeMyTrip</h1>
 <form action="admin.php" method="post">
 <div>
